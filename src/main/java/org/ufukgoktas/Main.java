@@ -1,7 +1,15 @@
 package org.ufukgoktas;
 
+
+
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        KafkaConsumerManager kafkaConsumerManager = new KafkaConsumerManager();
+        kafkaConsumerManager.start();
+
+        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+            kafkaConsumerManager.stop();
+        }));
     }
 }
