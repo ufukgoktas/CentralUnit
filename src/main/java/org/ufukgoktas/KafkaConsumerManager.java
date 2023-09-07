@@ -28,12 +28,12 @@ public class KafkaConsumerManager {
             for (ConsumerRecord<String, String> record : records) {
                 String sensorDataJson = record.value();
                 Gson gson = new Gson();
-                SensorData sensorData = gson.fromJson(sensorDataJson, SensorData.class);
-                if (record.key().equals("sensor1")) {
 
+                if (record.key().equals("sensor1")) {
+                    SensorData sensorData = gson.fromJson(sensorDataJson, SensorData.class);
                     PositionCalculator.calculateRelativePosition(sensorData, sensorData);
                 } else if (record.key().equals("sensor2")) {
-
+                    SensorData sensorData = gson.fromJson(sensorDataJson, SensorData.class);
                     PositionCalculator.calculateRelativePosition(sensorData, sensorData);
                 }
 

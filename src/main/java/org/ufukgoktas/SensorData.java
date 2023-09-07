@@ -3,14 +3,14 @@ package org.ufukgoktas;
 public class SensorData {
     private String sensorName;
     private double angle;
-    private int xPosition;
-    private int yPosition;
+    private int locationX;
+    private int locationY;
 
     public SensorData(String sensorName, double angle, int xPosition, int yPosition) {
         this.sensorName = sensorName;
         this.angle = angle;
-        this.xPosition = xPosition;
-        this.yPosition = yPosition;
+        this.locationX = xPosition;
+        this.locationY = yPosition;
     }
 
     public String getSensorName() {
@@ -29,19 +29,19 @@ public class SensorData {
         this.angle = angle;
     }
 
-    public int getxPosition() {
-        return xPosition;
+    public int getLocationX() {
+        return locationX;
     }
 
-    public void setxPosition(int xPosition) {
-        this.xPosition = xPosition;
+    public void setLocationX(int locationX) {
+        this.locationX = locationX;
     }
 
-    public int getyPosition() {
-        return yPosition;
+    public int getLocationY() {
+        return locationY;
     }
 
-    public void setyPosition(int yPosition) {
-        this.yPosition = yPosition;
+    public void setLocationY(int locationY) {
+        this.locationY = locationY;
     }
 }
